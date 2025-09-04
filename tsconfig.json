@@ -18,10 +18,13 @@
         "name": "next"
       }
     ],
+    
+    "baseUrl": ".",
     "paths": {
-      "@/*": ["./src/*"]
+      "@/Components/*": ["src"],
+      
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "src/Components/Navbar/Navbar.jsx", "src/app/page.jsx", "src/Components/ProjectFeatured/projectCard.jsx", "src/Components/ProjectFeatured/project.jsx", "src/Components/ProjectFeatured/ProjectFeatured.jsx", "src/Components/ContactSection/ContactSection.jsx", "src/ui/CardHeader.jsx", "src/ui/CardContent.jsx", "src/lib/utils.js", "src/Components/Hero/HeroHeading.jsx"],
   "exclude": ["node_modules"]
 }
