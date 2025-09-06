@@ -1,6 +1,6 @@
 "use client";
 
-import React from "react";
+import React, { useState } from "react";
 import { Mail, Phone, MapPin, Sun } from "lucide-react"
 import { Card } from "../ui/Card";
 import { CardHeader } from "../ui/CardHeader";
@@ -11,7 +11,10 @@ import { Input } from "../ui/Input";
 import { Textarea } from "../ui/Textarea";
 import { Button } from "../ui/Button";
 
+
 export function ContatForm({ title = "Send a Message" }: { title?: string }) {
+  const [message, setMessage] = useState("");
+
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     const formData = new FormData(e.currentTarget);
@@ -20,6 +23,10 @@ export function ContatForm({ title = "Send a Message" }: { title?: string }) {
       formDataObj[key] = String(value);
     }
     console.log("Form submitted:", formDataObj); // ✅ debug output
+  };
+
+  const handleVoiceTranscript = (transcript: string) => {
+    setMessage(prev => prev + (prev ? " " : "") + transcript);
   };
 
   return (
@@ -173,12 +180,17 @@ export function ContatForm({ title = "Send a Message" }: { title?: string }) {
                   </div>
 
                   <div className="space-y-2">
-                    <Label htmlFor="message" className="text-foreground">
-                      Message
-                    </Label>
+                    <div className="flex items-center justify-between">
+                      <Label htmlFor="message" className="text-foreground">
+                        Message
+                      </Label>
+                      
+                    </div>
                     <Textarea
                       id="message"
                       name="message"
+                      value={message}
+                      onChange={(e: React.ChangeEvent<HTMLTextAreaElement>) => setMessage(e.target.value)}
                       placeholder="Tell me about your project..."
                       rows={5}
                       className="bg-background border-input resize-none"
