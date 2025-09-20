@@ -40,17 +40,17 @@ export function About() {
           <h3 className="text-2xl font-semibold mb-6">My Journey</h3>
           <div className="space-y-4 text-muted-foreground">
             <p>
-              I'm a passionate full-stack developer with expertise in modern web
+              I&apos;m a passionate full-stack developer with expertise in modern web
               technologies. I love creating efficient, scalable solutions that
               solve real-world problems.
             </p>
             <p>
               With a strong foundation in React, TypeScript, and cloud
-              technologies, I've successfully delivered 50+ projects ranging
+              technologies, I&apos;ve successfully delivered 50+ projects ranging
               from startups to enterprise applications.
             </p>
             <p>
-              When I'm not coding, you'll find me contributing to open-source
+              When I&apos;m not coding, you will find me contributing to open-source
               projects, writing technical articles, or exploring the latest in
               web development.
             </p>

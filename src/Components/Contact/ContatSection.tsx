@@ -7,23 +7,23 @@ import React from "react"
 
 
 interface ContatSectionProps {
-  title?: string
-  description?: string
+  
+  
   email?: string
   phone?: string
   location?: string
   experience?: string[]
-  onFormSubmit?: (data: FormData | Record<string, string>) => void
+  
 }
 
 function ContatSection({
-  title = "Let's Work Together",
-  description = "Ready to bring your ideas to life? Let's discuss your next project",
+  
+  
   email,
   phone,
   location,
   experience,
-  onFormSubmit,
+  
 }: ContatSectionProps) {
   return (
     <div className="max-w-6xl mx-auto px-6">

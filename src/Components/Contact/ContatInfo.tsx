@@ -1,27 +1,28 @@
 import { Mail, Phone, MapPin } from "lucide-react"
 import ContatItem from "./ContatItem"
 
-interface ContactInfoProps {
-  email: String,
-  phone: String,
-  location: String,
-  experience: string,
+interface ContatInfoProps {
+  email?: string
+  phone?: string
+  location?: string
+  experience?: string[]
 }
 
 export function ContatInfo({
-  email = "your.email@example.com",
-  phone = "+1 (555) 123-4567",
-  location = "Your City, Country",
+  email = "anthonygodswill75@gmail.com",
+  phone = "07041488229",
+  location = "Woji Townhall, Nigeria",
   experience = [
     "5+ years of professional experience",
     "Fast turnaround and reliable delivery",
     "Modern, scalable solutions",
     "Ongoing support and maintenance",
   ],
-}) {
+}: ContatInfoProps) {
   return (
-    <div className="animate-slide-up">
+    <div id="contact" className="animate-slide-up">
       <h3 className="text-2xl font-semibold mb-8">Get in Touch</h3>
+      
       <div className="space-y-6">
         <ContatItem icon={Mail} title="Email" value={email} />
         <ContatItem icon={Phone} title="Phone" value={phone} />
@@ -39,3 +40,4 @@ export function ContatInfo({
     </div>
   )
 }
+

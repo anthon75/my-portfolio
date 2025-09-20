@@ -13,11 +13,11 @@ export default function Home() {
       <About />
       <ProjectFeatured />
 
-      <main className="min-h-screen py-20 shadow-2xl">
+      <main className="min-h-screen py-20 relative rounded-xl p-[1px] bg-gradient-to-r from-gray-300/0 via-gray-400/40 to-gray-300/0 shadow-lg shadow-gray-400/20">
         <ContatSection
-          email="hello@yoursite.com"
-          phone="+1 (555) 987-6543"
-          location="San Francisco, CA"
+          email="Anthonygodswill75@gmail.com"
+          phone="+234 7041488229"
+          location=" Woji Townhall, Rivers State, Nigeria"
         />
       </main>
 

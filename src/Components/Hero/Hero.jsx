@@ -7,7 +7,7 @@ import { FiArrowDown } from "react-icons/fi";
 
 const Hero = () => {
   return (
-    <div id="hero" className="flex flex-col mb-20">     
+    <div id="hero" className="flex flex-col mb-20 ">     
       <HeroHeading 
         greeting="Hi, I'm"
         name="Anthony"
